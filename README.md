@@ -1,4 +1,4 @@
-<img src="images/segmentacao-publico-alvo.jpg" width="1000" height="330" style="float:center; margin-right:10px;">
+<img src="images/segmentacao-publico-alvo.jpg" width="1000" height="300" style="float:center; margin-right:10px;">
 
 # Customer Clustering
 
