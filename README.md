@@ -10,9 +10,17 @@ Neste projeto foi utilizado dados de uma rede de super-mercados norte americana 
 
 ## 2. Objetivos
 
-O principal objetivo proposto consiste em gerar insights para o setor de marketing desse estabelecimento, evidenciando os clientes-alvos e auxiliando na tarefa de construir uma estratégia eficaz, porém, no decorrer do projeto buscamos atingir alguns objetivos específicos, tais como:
+O principal objetivo proposto consiste em gerar insights para o setor de marketing desse estabelecimento, evidenciando os clientes-alvos e auxiliando na tarefa de construir uma estratégia eficaz. No entanto, no decorrer do projeto buscamos atingir alguns objetivos específicos, tais como:
 
-- Estudar as diferentes características e avaliar quais as mais eficazes para uma possível clusterização univariada ou bivariada.
+- Explorar os dados e com isso explicar possíveis clusters que irâo surgir;
+
+- Estudar as maneiras de se obter o número ótimo de grupos em meio aos dados;
+
+- Realizar a clusterização e construir os perfis dos clientes de cada grupo;
+
+- Definir estratégias eficientes com base nos perfis;
+
+- Implementar um método de classificação de ovos clientes.
 
 ## 3. Métodos
 
