@@ -37,6 +37,30 @@ Os métodos aplicados neste projeto e a construção dos notebooks foram baseado
 
   
 
-  ## 4. Desenvolvimento
+## 4. Desenvolvimento
 
-  1. 
+Na etapa de entendimento dos dados utilizamos como base o dicionário disponibilizado pelo site [data_dictionary](https://docs.google.com/spreadsheets/d/1dP1ZB_Yuv610Fa1aw_rCSYrsighS44VB/edit?usp=sharing&ouid=105591099330593823176&rtpof=true&sd=true), em resumo temos que as colunas indicam:
+
+  - **ID**: Representa a identificação de cada cliente dentro do ambiente de gerenciamento do cartão;
+
+  - **Sex**: Representa o sexo biológico do cliente {0,1}, onde 0 é masculino e 1 feminino;
+
+  - **Marital Status**: Representa o estado civil dos cliente {0,1}, em que 0 é solteiro e 1 outros estados civis;
+
+  - **Age**: Representa a idade dos clientes;
+  
+  - **Education**: Representa o nível de escolaridade dos clientes {0,1,2,3}, em que 0 estão os níveis desconhecidos/outros, 1 até o ensino médio, 2 até a graduação e 3 até pós-graduação;
+
+  - **Income**: Representa a renda salarial anual dos clientes em dólares;
+
+  - **Occupation**: Representa o tipo de trabalho que o cliente atua {0,1,2}, onde 0 são desempregados/trabalho não qualificado, 1 são empregos qualificados/servidor e 2 são trabalhos muito qualificados/autoridades/administradores;
+
+  - **Settlement size**: Representa o tamanho da cidade em que o cliente mora {0,1,2}, 0 cidades pequenas, 1 cidades de porte médio e 2 grandes cidades.
+
+Avaliamos a estrutura dos dados estudando a presença de outliers, dados duplicados e valores faltantes, não identificamos nenhuma avaria, desse modo, prosseguimos para a exploração dos dados por meio da visualização gráfica com as bibliotecas **Matplotlib.pyplot** e **Seaborn**. Observamos as seguintes distribuições:
+
+<p align="center">
+  <img src="images/data-exploratory.jpg" alt="Descrição da imagem">
+</p>
+
+   
