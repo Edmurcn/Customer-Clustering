@@ -39,6 +39,8 @@ Os métodos aplicados neste projeto e a construção dos notebooks foram baseado
 
 ## 4. Desenvolvimento
 
+### Entendimento dos Dados
+
 Na etapa de entendimento dos dados utilizamos como base o dicionário disponibilizado pelo site [data_dictionary](https://docs.google.com/spreadsheets/d/1dP1ZB_Yuv610Fa1aw_rCSYrsighS44VB/edit?usp=sharing&ouid=105591099330593823176&rtpof=true&sd=true), em resumo temos que as colunas indicam:
 
   - **ID**: Representa a identificação de cada cliente dentro do ambiente de gerenciamento do cartão;
@@ -57,10 +59,23 @@ Na etapa de entendimento dos dados utilizamos como base o dicionário disponibil
 
   - **Settlement size**: Representa o tamanho da cidade em que o cliente mora {0,1,2}, 0 cidades pequenas, 1 cidades de porte médio e 2 grandes cidades.
 
-Avaliamos a estrutura dos dados estudando a presença de outliers, dados duplicados e valores faltantes, não identificamos nenhuma avaria, desse modo, prosseguimos para a exploração dos dados por meio da visualização gráfica com as bibliotecas **Matplotlib.pyplot** e **Seaborn**. Observamos as seguintes distribuições:
+Avaliamos a estrutura dos dados estudando a presença de outliers, dados duplicados ou valores faltantes, não identificamos nenhuma avaria, desse modo, prosseguimos para a exploração dos dados por meio da visualização gráfica com as bibliotecas **Matplotlib.pyplot** e **Seaborn**. Observamos as seguintes distribuições:
 
-<p align="center">
-  <img src="images/data-exploratory.jpg" alt="Descrição da imagem">
-</p>
+<img src="images/data-exploratory.png" width="800" height="400" style="float:center; margin-right:10px;">
 
-   
+Conseguimos extrair algumas informações de possíveis grupos dentre os clientes:
+
+  - **Grupo 1**: A maioria dos homens estão solteiros por volta dos 35 anos, moram em cidades maiores e oculpam cargos significativos em suas respectivas empresas com altos salários.
+
+  - **Grupo 2**: Uma grande parte das mulheres estão em relacionamentos aos 30 anos, residem em maioria em pequenas cidades e trabalham em cargos com salários mais baixos.
+
+Além disso, obtemos algumas nuances a respeito das condições vividas pelos clientes, tais como:
+
+  - Os salários para cargos iguais se difere pelo tamanho das cidades, de forma que as cidades menores oferecem salários menores;
+
+  - Os salários também se difere quanto ao sexo das pessoas, dado que mulheres recebem salários mais baixo ocupando o mesmo cargo;
+
+### Modelagem
+
+
+
