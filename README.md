@@ -77,5 +77,17 @@ Além disso, obtemos algumas nuances a respeito das condições vividas pelos cl
 
 ### Modelagem
 
+Primeiramente, realizamos a etapa de determinação do número de grupos no conjunto, utilizamos as métricas de **WCSS** e o **Silhouette Coefficiente** para diferentes valores de k (número de grupos) e avaliamos a melhor perfonmance. 
 
+O funcionamento e a base de cálculo das métrica estão explicadas em detalhes no *(notebook)*, resumidamente, **Elbow Method** avalia o ponto de reflexão da curva da medida de WCSS cuja base está na dispersão do cluster, já o **Silhouette Method** busca a maximização do valor do coeficiente de silhueta cujo cálculo leva em consideração a intersecção dos grupos. Abaixo apresentamos os resultados obtidos pelos métodos.
 
+div style="display: flex; justify-content: space-around;">
+    <div style="margin: 10px;">
+        <img src="images/elbow.png" alt="Imagem 1" style="height: 200px; width: 300px;">
+        <p style="text-align: center;">Legenda da Imagem 1</p>
+    </div>
+    <div style="margin: 10px;">
+        <img src="URL_DA_IMAGEM_2" alt="Imagem 2" style="height: 200px; width: 300px;">
+        <p style="text-align: center;">Legenda da Imagem 2</p>
+    </div>
+</div>
