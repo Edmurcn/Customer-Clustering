@@ -59,13 +59,13 @@ Na etapa de entendimento dos dados utilizamos como base o dicionário disponibil
 
   - **Settlement size**: Representa o tamanho da cidade em que o cliente mora {0,1,2}, 0 cidades pequenas, 1 cidades de porte médio e 2 grandes cidades.
 
-Avaliamos a estrutura dos dados estudando a presença de outliers, dados duplicados ou valores faltantes, não identificamos nenhuma avaria, desse modo, prosseguimos para a exploração dos dados por meio da visualização gráfica com as bibliotecas **Matplotlib.pyplot** e **Seaborn**. Observamos as seguintes distribuições:
+Avaliamos a estrutura dos dados estudando a presença de outliers, dados duplicados, dados desbalanceados ou valores faltantes, não identificamos nenhuma avaria, desse modo, prosseguimos para a exploração dos dados por meio da visualização gráfica com as bibliotecas **Matplotlib.pyplot** e **Seaborn**. Observamos as seguintes distribuições:
 
 <img src="images/data-exploratory.png" width="800" height="400" style="float:center; margin-right:10px;">
 
 Conseguimos extrair algumas informações de possíveis grupos dentre os clientes:
 
-  - **Grupo 1**: A maioria dos homens estão solteiros por volta dos 35 anos, moram em cidades maiores e oculpam cargos significativos em suas respectivas empresas com altos salários.
+  - **Grupo 1**: A maioria dos homens estão solteiros por volta dos 35 anos, moram em cidades maiores e oculpam cargos com altos salários.
 
   - **Grupo 2**: Uma grande parte das mulheres estão em relacionamentos aos 30 anos, residem em maioria em pequenas cidades e trabalham em cargos com salários mais baixos.
 
@@ -73,7 +73,7 @@ Além disso, obtemos algumas nuances a respeito das condições vividas pelos cl
 
   - Os salários para cargos iguais se difere pelo tamanho das cidades, de forma que as cidades menores oferecem salários menores;
 
-  - Os salários também se difere quanto ao sexo das pessoas, dado que mulheres recebem salários mais baixo ocupando o mesmo cargo;
+  - As mulheres média possuem níveis de educação mais altos que os homens, mas preferem residir em cidades menores.
 
 ### Modelagem
 
@@ -81,13 +81,18 @@ Primeiramente, realizamos a etapa de determinação do número de grupos no conj
 
 O funcionamento e a base de cálculo das métrica estão explicadas em detalhes no *(notebook)*, resumidamente, **Elbow Method** avalia o ponto de reflexão da curva da medida de WCSS cuja base está na dispersão do cluster, já o **Silhouette Method** busca a maximização do valor do coeficiente de silhueta cujo cálculo leva em consideração a intersecção dos grupos. Abaixo apresentamos os resultados obtidos pelos métodos.
 
-div style="display: flex; justify-content: space-around;">
-    <div style="margin: 10px;">
-        <img src="images/elbow.png" alt="Imagem 1" style="height: 200px; width: 300px;">
-        <p style="text-align: center;">Legenda da Imagem 1</p>
-    </div>
-    <div style="margin: 10px;">
-        <img src="URL_DA_IMAGEM_2" alt="Imagem 2" style="height: 200px; width: 300px;">
-        <p style="text-align: center;">Legenda da Imagem 2</p>
-    </div>
+
+<div style="display: inline_block">
+  <div>
+  <img src="images/elbow.png" height=400 width=450 align="left" />
+  </div>
+  <div>
+  <img src="images/coef_silhueta.png" height=90 width=520 align="right" />
+  </div>
 </div>
+<div> </div>
+
+De acordo com 
+
+
+
