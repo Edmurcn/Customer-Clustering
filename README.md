@@ -87,11 +87,11 @@ O funcionamento e a base de cálculo das métrica estão explicadas em detalhes 
     <img src="images/elbow.png" height=300 width=380 align="left">
   </div>
   <div>
-    <img src="images/coef_silhueta.png" height=65 width=400 align="right">
+    <img src="images/coef_silhueta.png" height=65 width=420 align="right">
   </div>
 </div>
 
-<br/><br/><br/><br/>
+<br/><br/><br/>
 
 De acordo com os métodos podemos concluir que o número ideal de grupos existentes no conjunto é k = 4. A partir disso, aplicamos a clusterização aos dados;      a princípio foi escolhido o modelo **KMeans**, por demonstrar alta performance com resultados fáceis de interpretar. Após o processo de segmentação, foi         agregado ao conjunto uma coluna indicando as classes de cada cliente, o que possibilita a análise dos perfis classificados.
 
