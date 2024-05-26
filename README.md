@@ -84,7 +84,7 @@ O funcionamento e a base de cálculo das métrica estão explicadas em detalhes 
 
 <div style="display: inline-block">
   <div>
-    <img src="images/elbow.png" height=300 width=350 align="left">
+    <img src="images/elbow.png" height=300 width=380 align="left">
   </div>
   <div>
     <img src="images/coef_silhueta.png" height=70 width=400 align="right">
