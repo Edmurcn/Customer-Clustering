@@ -77,10 +77,9 @@ Além disso, obtemos algumas nuances a respeito das condições vividas pelos cl
 
 ### Modelagem
 
-Primeiramente, realizamos a etapa de determinação do número de grupos no conjunto, utilizamos as métricas de **WCSS** e o **Silhouette Coefficiente** para diferentes valores de k (número de grupos) e avaliamos a melhor perfonmance. 
+Primeiramente, realizamos a etapa de determinação do número de grupos no conjunto, utilizamos as métricas de **WCSS** e o **Silhouette Coefficiente** para diferentes valores de k (número de grupos) e avaliamos a melhor performance. 
 
-O funcionamento e a base de cálculo das métrica estão explicadas em detalhes no *(notebook)*, resumidamente, **Elbow Method** avalia o ponto de reflexão da curva da medida de WCSS cuja base está na dispersão do cluster, já o **Silhouette Method** busca a maximização do valor do coeficiente de silhueta cujo cálculo leva em consideração a intersecção dos grupos. Abaixo apresentamos os resultados obtidos pelos métodos.
-
+O funcionamento e a base de cálculo das métricas estão explicadas em detalhes no [notebook](https://github.com/Edmurcn/Customer-Clustering/blob/main/notebooks/2.modeling.ipynb), resumidamente, **Elbow Method** avalia o ponto de reflexão da curva da medida de WCSS cuja base está na dispersão do cluster, já o **Silhouette Method** busca a maximização do valor do coeficiente de silhueta cujo cálculo leva em consideração a intersecção dos grupos. Abaixo apresentamos os resultados obtidos pelos métodos.
 
 <div style="display: inline-block">
   <div>
@@ -93,7 +92,23 @@ O funcionamento e a base de cálculo das métrica estão explicadas em detalhes 
 
 <br/><br/><br/>
 
-De acordo com os métodos podemos concluir que o número ideal de grupos existentes no conjunto é k = 4. A partir disso, aplicamos a clusterização aos dados;      a princípio foi escolhido o modelo **KMeans**, por demonstrar alta performance com resultados fáceis de interpretar. Após o processo de segmentação, foi         agregado ao conjunto uma coluna indicando as classes de cada cliente, o que possibilita a análise dos perfis classificados.
+De acordo com os métodos podemos concluir que o número ideal de grupos existentes no conjunto é k = 4. Por mais que o coeficiente de silhueta é maior para k = 3, a análise foi feita em conujunto com o outro método, sendo assim, avançamos com o número citado e avaliamos o desempenho. A partir disso, aplicamos a clusterização aos dados;      a princípio foi escolhido o modelo **KMeans**, por demonstrar alta performance com resultados fáceis de interpretar. Após o processo de segmentação, foi         agregado ao conjunto uma coluna indicando as classes de cada cliente, o que possibilita a análise dos perfis classificados.
+
+<br/><br/><br/>
+
+### Avaliação
+
+Na etapa de avaliação do desempenho do modelo, vamos utilizar gráficos de densidade de cada coluna dos dados, filtrando com base na coluna dos grupos criada na etapa anterior. O conjunto de gráficos construidos está disposto abaixo:
+
+<img src="images/data-exploratory.png" width="800" height="400" style="float:center; margin-right:10px;">
+
+
+
+
+
+
+
+
 
 
 
