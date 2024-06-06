@@ -2,13 +2,13 @@
 
 # Customer Clustering
 
-Este projeto utiliza a técnica de aprendizado não-supervisionado denominado como clusterização, tal técnica busca agrupar elementos dentro de um conjunto de dados conforme padrões observados pela máquina. Mais especificamente, iremos atuar na área de segmentação de clientes, cujo estudo está direcionado aos padrões entre diferentes clientes ou usuários de um serviço. Para isso, é necessário levantar informações a respeitos dos indivíduos, estas podem estar contidas dentro das classe de informações $\textbf{Comportamentais, Demográficas, Psicológicas,}$ e entre outras que são utilizadas para interesses mais particulares. A segmentação de clientes é um importante processo dentro das empresas, seus resultados podem gerar insights para diferentes setores como o Marketing e Negócios, auxiliando em decisões relevantes.
+Este projeto utiliza a técnica de aprendizado não-supervisionado denominado como clusterização, tal técnica busca agrupar elementos dentro de um conjunto de dados conforme padrões observados pela máquina. Mais especificamente, iremos atuar na área de segmentação de clientes, cujo estudo está direcionado aos padrões entre diferentes clientes ou usuários de um serviço. Para isso, é necessário levantar informações a respeitos dos indivíduos, as quais estão contidas dentro das classes $\textbf{Comportamentais, Demográficas, Psicológicas,}$ e entre outras que são utilizadas para interesses mais particulares. A segmentação de clientes é um importante processo dentro das empresas, seus resultados geram insights para diferentes setores como o Marketing e Negócios, auxiliando em decisões relevantes.
 
 ## 1. Introdução
 
 Neste projeto foi utilizado dados de uma rede de super-mercados norte americana focada em vendas de produtos "FMCG", na tradução "Bens de consumo rápido", estes foram coletados a partir do cadastro de clientes em cartões de fidelidade, os dados contém informações da classe demográfica dos clientes, como a idade, o sexo, o estado civil, o nível de educação, o salário anual, a ocupação e o tamanho da cidade. O conjunto está disponível no Kaggle e pode ser acessado pelo link [Dados Kaggle](https://www.kaggle.com/datasets/dev0914sharma/customer-clustering). 
 
-Após aplicações de ferramentas de exploração e visualização de dados compreendemos que existia potenciais grupos no cojunto, então, com o auxílio das técnicas $\textbf{Elbow}$ e  $\textbf{Silhouette}$ evidenciamos a presença de 4 clusters, a segmentação foi realizada com o método de $\textbf{KMeans}$, cuja performance nos revelou perfis leais ao estabelecimento e perfis potenciais para compras. Com base nisso, concebemos possíveis estratégias para serem implementadas pela rede de super-mercados afim de converter os clientes potenciais em compras e aumentar a frequência de aquisição de clientes leais. 
+Após aplicações de ferramentas de exploração e visualização de dados compreendemos que existia potenciais grupos no cojunto, então, com o auxílio das técnicas $\textbf{Elbow}$ e  $\textbf{Silhouette}$ evidenciamos a presença de 4 clusters, a segmentação foi realizada com o método de aprendizado não-supervisionado $\textbf{KMeans}$, cuja performance nos revelou perfis leais ao estabelecimento e perfis potenciais para compras. Com base nisso, concebemos possíveis estratégias para serem implementadas pela rede de super-mercados afim de converter os clientes potenciais em compras e aumentar a frequência de aquisição de clientes leais. 
 
 ## 2. Objetivos
 
@@ -34,8 +34,6 @@ Os métodos aplicados neste projeto e a construção dos notebooks foram baseado
 4. Modelagem;
 5. Avaliação;
 6. Implementação.
-
-  
 
 ## 4. Desenvolvimento
 
@@ -73,7 +71,7 @@ Além disso, obtemos algumas nuances a respeito das condições vividas pelos cl
 
   - Os salários para cargos iguais se difere pelo tamanho das cidades, de forma que as cidades menores oferecem salários menores;
 
-  - As mulheres média possuem níveis de educação mais altos que os homens, mas preferem residir em cidades menores.
+  - As mulheres em média possuem níveis de educação mais altos que os homens, mas preferem residir em cidades menores.
 
 ### Modelagem
 
@@ -92,25 +90,44 @@ O funcionamento e a base de cálculo das métricas estão explicadas em detalhes
 
 <br/><br/><br/>
 
-De acordo com os métodos podemos concluir que o número ideal de grupos existentes no conjunto é k = 4. Por mais que o coeficiente de silhueta é maior para k = 3, a análise foi feita em conujunto com o outro método, sendo assim, avançamos com o número citado e avaliamos o desempenho. A partir disso, aplicamos a clusterização aos dados;      a princípio foi escolhido o modelo **KMeans**, por demonstrar alta performance com resultados fáceis de interpretar. Após o processo de segmentação, foi         agregado ao conjunto uma coluna indicando as classes de cada cliente, o que possibilita a análise dos perfis classificados.
+De acordo com os métodos podemos concluir que o número ideal de grupos existentes no conjunto é k = 4. Por mais que o coeficiente de silhueta é maior para k = 3, a análise foi feita em conujunto com o outro método, sendo assim, avançamos com o número citado e avaliamos o desempenho. A partir disso, aplicamos a clusterização aos dados; a princípio foi escolhido o modelo **KMeans**, por demonstrar alta performance com resultados fáceis de interpretar. Após o processo de segmentação, foi agregado ao conjunto uma coluna indicando as classes de cada cliente, o que possibilita a análise dos perfis classificados.
 
-<br/><br/><br/>
+<br/>
 
 ### Avaliação
 
-Na etapa de avaliação do desempenho do modelo, vamos utilizar gráficos de densidade de cada coluna dos dados, filtrando com base na coluna dos grupos criada na etapa anterior. O conjunto de gráficos construidos está disposto abaixo:
+Na etapa de avaliação do desempenho do modelo, vamos utilizar gráficos de densidade de cada coluna dos dados, filtrando com base na coluna dos grupos criada na etapa anterior. O conjunto de gráficos construídos, juntamente com o gráfico da população de cada grupo dentre a gama de clientes está disposto abaixo:
 
-<img src="images/analise.png" width="1000" height="600" style="float:center; margin-right:10px;">
+<img src="images/analise_clusters.png" width="1000" height="500" style="float:center; margin-right:10px;">
 
-<div >
-  <div style="float:left; width: 45%;">
-    <p style="text-align: left;"> Além disso, o gráfico ao lado indica a população de cada grupo dentre a gama de clientes. Informação útil para interpretar quais são clientes fieis e possíveis clientes em potencial.
-    </p>
-  </div>
-  <div>
-    <img src="images/analise_2.png" height=500 width=650 align="right">
-  </div>
-</div>
+Com base na visualização acima, levantamos os perfis de cada cluster presente no conjunto:
+
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <td style="width: 50%; vertical-align: top; padding: 10px; border: none;">
+      <strong>Cluster 0</strong>
+      <p>- Contidas no cluster 0, estão pessoas de sexo diverso, com idades superiores a 40 anos, que por sua vez, possuem uma boa educação ocupam em maioria cargos mais elevados com salários maiores e moram em cidades variadas;</p>
+      <p>- Podemos dizer que são pessoas já estabelecidas que possuem uma rotina estável, sem muitos gastos excessivos ou fora do comum.</p>
+      <br><br>
+      <strong>Cluster 1</strong>
+      <p>- No grupo 1 encontramos clientes que em sua grande maioria estão solteiras, possuem idades entre 30 e 40 anos, ocupam cargos menores com salários mais baixos, em que não precisam de tanta escolaridade, além disso, praticamente todos moram em cidades menores;</p>
+      <p>- Concluímos que são pessoas que talvez estejam estabelecidas em cargos menores, ou iniciando sua carreira profissional. Por outro lado, são mais jovens e estão mais propícias a realizarem compras voltadas a gastos superficiais.</p>
+    </td>
+    <td style="width: 50%; vertical-align: top; padding: 10px; border: none;">
+      <br>
+      <strong>Cluster 2</strong>
+      <p>- A respeito do cluster 2, cujo está presente a maioria dos clientes, temos em grande parte mulheres com idade inferior a 40 anos dentro de um relacionamento, com nível de escolaridade mediano, ocupando cargos medianos com pequeno salário, sendo que a maioria mora em pequenas cidades;</p>
+      <p>- Conseguimos atribuir a este perfil possíveis jovens mães ou somente jovens casadas que provavelmente se encarretam de realizar as compras da família. Além disso, são pessoas que têm maiores chances de aproveitar promoções rotineiras visto uma maior frequência de visitas ao estabelecimento.</p>
+      <strong>Cluster 3</strong>
+      <p>- Os clientes pertencentes ao grupo 3, são majoritariamente homens solteiros com idade em torno de 40 anos, cuja educação é mediana, porém ocupam cargos grandes e possuem maiores salários, também residem em grandes cidades;</p>
+      <p>- Identificamos estes clientes como homens que estão em busca de oportunidades de avanço profissional em grandes centros, dessa forma, provavelmente precarizam sua alimentação por conta da produtividade e isso faz com que busquem por alimentos mais acessíveis.</p>
+    </td>
+  </tr>
+</table>
+
+### Implementação
+
+
 
 
 
