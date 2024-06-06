@@ -100,8 +100,17 @@ De acordo com os métodos podemos concluir que o número ideal de grupos existen
 
 Na etapa de avaliação do desempenho do modelo, vamos utilizar gráficos de densidade de cada coluna dos dados, filtrando com base na coluna dos grupos criada na etapa anterior. O conjunto de gráficos construidos está disposto abaixo:
 
-<img src="images/data-exploratory.png" width="800" height="400" style="float:center; margin-right:10px;">
+<img src="images/analise.png" width="1000" height="600" style="float:center; margin-right:10px;">
 
+<div >
+  <div style="float:left; width: 45%;">
+    <p style="text-align: left;"> Além disso, o gráfico ao lado indica a população de cada grupo dentre a gama de clientes. Informação útil para interpretar quais são clientes fieis e possíveis clientes em potencial.
+    </p>
+  </div>
+  <div>
+    <img src="images/analise_2.png" height=500 width=650 align="right">
+  </div>
+</div>
 
 
 
