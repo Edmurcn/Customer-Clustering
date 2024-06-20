@@ -1,4 +1,5 @@
 import sys
+import model_train
 
 def detailed_error_msg(error, error_details: sys):
     '''
