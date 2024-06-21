@@ -1,4 +1,4 @@
-<img src="images/segmentacao-publico-alvo.jpg" width="1000" height="270" style="float:center; margin-right:10px;">
+<img src="imagens/segmentacao-publico-alvo.jpg" width="1000" height="270" style="float:center; margin-right:10px;">
 
 # Customer Clustering
 
@@ -59,7 +59,7 @@ Na etapa de entendimento dos dados utilizamos como base o dicionário disponibil
 
 Avaliamos a estrutura dos dados estudando a presença de outliers, dados duplicados, dados desbalanceados ou valores faltantes, não identificamos nenhuma avaria, desse modo, prosseguimos para a exploração dos dados por meio da visualização gráfica com as bibliotecas **Matplotlib.pyplot** e **Seaborn**. Observamos as seguintes distribuições:
 
-<img src="images/data-exploratory.png" width="800" height="400" style="float:center; margin-right:10px;">
+<img src="imagens/data-exploratory.png" width="800" height="400" style="float:center; margin-right:10px;">
 
 Conseguimos extrair algumas informações de possíveis grupos dentre os clientes:
 
@@ -81,10 +81,10 @@ O funcionamento e a base de cálculo das métricas estão explicadas em detalhes
 
 <div style="display: inline-block">
   <div>
-    <img src="images/elbow.png" height=300 width=380 align="left">
+    <img src="imagens/elbow.png" height=300 width=380 align="left">
   </div>
   <div>
-    <img src="images/coef_silhueta.png" height=65 width=410 align="right">
+    <img src="imagens/coef_silhueta.png" height=65 width=410 align="right">
   </div>
 </div>
 
@@ -98,7 +98,7 @@ De acordo com os métodos podemos concluir que o número ideal de grupos existen
 
 Na etapa de avaliação do desempenho do modelo, vamos utilizar gráficos de densidade de cada coluna dos dados, filtrando com base na coluna dos grupos criada na etapa anterior. O conjunto de gráficos construídos, juntamente com o gráfico da população de cada grupo dentre a gama de clientes está disposto abaixo:
 
-<img src="images/analise_clusters.png" width="1000" height="500" style="float:center; margin-right:10px;">
+<img src="imagens/analise_clusters.png" width="1000" height="500" style="float:center; margin-right:10px;">
 
 Com base na visualização acima, levantamos os perfis de cada cluster presente no conjunto:
 
