@@ -7,7 +7,7 @@ import plotly.express as px
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.metrics import roc_curve, confusion_matrix, auc
 from sklearn.metrics import RocCurveDisplay, ConfusionMatrixDisplay
-from sklearn.preprocessing import label_binarize
+from sklearn.preprocessing import label_binarize, StandardScaler
 
 import time
 
@@ -21,7 +21,7 @@ filterwarnings('ignore')
 
 #Função que avalia a performance dos modelos
 def evaluation_model_multclass_classifier(models, X, y):
-
+    scaler = StandardScaler()
     # try:
     #Criando os arquivos para os resultados
     acc_models = {}
@@ -41,7 +41,11 @@ def evaluation_model_multclass_classifier(models, X, y):
 
     #Dividindo os dados de maneira equilibrada entre treino e teste
     x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+    
+    X = scaler.fit_transform(X)
 
+    x_train = scaler.fit_transform(x_train)
+    x_test = scaler.transform(x_test)
     classes = np.unique(y)
     y_test_binarized = label_binarize(y_test, classes=classes )
 
